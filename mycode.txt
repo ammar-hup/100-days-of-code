@@ -1,1 +1,71 @@
-#code
+//start of code
+
+#include <iostream>
+#include <fstream>
+#include <map>
+#define MIN-BALANCE 500
+using namespace std;
+
+class Account
+{
+    //class properties
+  private:
+    long accountnumber;
+    string firstname;
+    string lastname;
+    float balance;
+    static long NextAccountNumber;
+    //class behaviors
+  public:
+
+    //constructors
+    Account(){}
+    Account(string fname ,string lname ,float bal);
+    //Actions
+    long getAccno(){return accountnumber;}
+    string getFirstName(){return firstname;}
+    string getLastName(){return lastname;}
+    float getBalance(){return balance;}
+    void Debosit(float amount);
+    void Withdraw(float amount);
+    static void setLastAccountNumber(long accountnumber);
+    static long getLastAccountNumber();
+    friend ofstream & operator<<(ofstream &ofs,Account &acc);
+    friend ifstream & operator>>(ifstream &ifs,Account &acc);
+    friend ostream & operator<<(ostream &os,Account &acc);
+};
+   long Account::NextAccountNumber=0;
+
+class Bank
+{
+    //class properties
+  private:
+    map<long,Account> accounts;  //a map structure to store the bank accounts on list
+
+    //class behaviors
+  public:
+
+    //constructors
+    Bank();
+    //Actions
+    Account OpenAccount(string fname ,string lname ,float bal);
+    Account BalanceEnquiry(long accountNumber);
+    Account Diposite(long accountNumber ,float amount);
+    Account Withdraw(long accountNumber ,float amount);
+    void CloseAccount(long accountNumber);
+    void ShowAllAccounts();
+    ~Bank();
+};
+int main()
+{
+    Bank b;
+    Account acc;
+
+    //make a menu
+
+    switch(// some expression)
+    {
+
+    }
+
+}
