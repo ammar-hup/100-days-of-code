@@ -6,4 +6,4 @@
 
 **Thoughts:** I guess it will not be an easy one as its my first time making a project but i'll keep going. 
 
-**Link to work:** [c++ course](https://www.udemy.com/course/cpp-deep-dive/) [recent code progress](https://github.com/MaGnsio/100-days-of-code/tree/master/banking%20system%20project)
+**Link to work:** [c++ course](https://www.udemy.com/course/cpp-deep-dive/) , [recent code progress](https://github.com/MaGnsio/100-days-of-code/tree/master/banking%20system%20project)
