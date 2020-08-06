@@ -1,5 +1,4 @@
-# 100 Days Of Code - Log
-
+ []: # "
 ##### Day 0: February 30, 2016 (Example 1)
 (delete me or comment me out)
 
@@ -9,7 +8,9 @@
 
  **Link to work:** [Calculator App](http://www.example.com)
 
- **Link(s) to work**: [Calculator App](http://www.example.com)
+ **Link(s) to work**: [Calculator App](http://www.example.com)"
+# 100 Days Of Code - Log
+
 
 ### Day 1: August 6, 2020 
  (delete me or comment me out)
