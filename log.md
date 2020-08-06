@@ -2,7 +2,7 @@
 
 ### Day 0: August 06, 2020
 
-**Today's Progress:** I started a banking system project which is the for the last course i've finished (& the only), made a flow chart for the project, made the code structure.
+**Today's Progress:** I started a banking system project which is for the last course i've finished (& the only), made a flow chart for the project, and made the code structure (classes & functions declaration ...) .
 
 **Thoughts:** I guess it will not be an easy one as its my first time making a project but i'll keep going. 
 
