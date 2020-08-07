@@ -2,7 +2,7 @@
 #include <iostream>
 #include <fstream>
 #include <map>
-#define MIN-BALANCE 500
+#define Min_BALANCE 500
 using namespace std;
 
 class Account
@@ -25,8 +25,8 @@ class Account
     string getFirstName(){return firstname;}
     string getLastName(){return lastname;}
     float getBalance(){return balance;}
-    void Debosit(float amount);
-    void Withdraw(float amount);
+    float Debosit(float amount);
+    float Withdraw(float amount);
     static void setLastAccountNumber(long accountnumber);
     static long getLastAccountNumber();
     friend ofstream & operator<<(ofstream &ofs,Account &acc);
@@ -37,6 +37,7 @@ class Account
 
 class Bank
 {
+    Bank(string firstname,string flastname,float balance);
     //class properties
   private:
     map<long,Account> accounts;  //a map structure to store the bank accounts on list
@@ -60,7 +61,7 @@ int main()
     Account acc;
     int choice,accnum;
     string fname,lname;
-    float balance;
+    float balance,amount;
 do
 {
     //make a menu
@@ -141,4 +142,20 @@ Account::Account(string fname,string lname,float bal)
     firstname=fname;
     lastname=lname;
     balance=bal;
+}
+Account::Debosit(float amount)
+{
+    return  balance+=amount;
+}
+Account::Withdraw(float amount)
+{
+    if(balance -amount<Min_BALANCE
+       )
+    return balance-=amount;
+}
+Bank::OpenAccount(string fname,string lname,float balance)
+{
+    this.balance=balance;
+    firstname=fname;
+    lastname=lname;
 }
