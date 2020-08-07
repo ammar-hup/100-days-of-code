@@ -7,3 +7,11 @@
 **Thoughts:** I guess it will not be an easy one as its my first time making a project but i'll keep going. 
 
 **Link to work:** [c++ course](https://www.udemy.com/course/cpp-deep-dive/) , [recent code progress](https://github.com/MaGnsio/100-days-of-code/tree/master/banking%20system%20project)
+
+### Day 1: August 07, 2020
+
+**Today's Progress:** Improved the code structure, thinked about some new features and the way to implement them and I wrote some functions definition.
+
+**Thoughts:** I feel like i'm going very slow but as long as i'm learning and making new steps its fine. 
+
+**Link to work:**[recent code progress](https://github.com/MaGnsio/100-days-of-code/tree/master/banking%20system%20project)
