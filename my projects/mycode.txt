@@ -1,5 +1,4 @@
 //start of code
-
 #include <iostream>
 #include <fstream>
 #include <map>
@@ -20,7 +19,7 @@ class Account
 
     //constructors
     Account(){}
-    Account(string fname ,string lname ,float bal);
+    Account(string fname ,string lname ,float balance);
     //Actions
     long getAccno(){return accountnumber;}
     string getFirstName(){return firstname;}
@@ -46,9 +45,8 @@ class Bank
   public:
 
     //constructors
-    Bank();
     //Actions
-    Account OpenAccount(string fname ,string lname ,float bal);
+    Account OpenAccount(string fname ,string lname ,float balance);
     Account BalanceEnquiry(long accountNumber);
     Account Diposite(long accountNumber ,float amount);
     Account Withdraw(long accountNumber ,float amount);
@@ -60,12 +58,87 @@ int main()
 {
     Bank b;
     Account acc;
-
+    int choice,accnum;
+    string fname,lname;
+    float balance;
+do
+{
     //make a menu
-
-    switch(// some expression)
+cout<<"Banking System\n\n";
+cout<<"         Select one Option below\n";
+cout<<"         1.Create new Account\n";
+cout<<"         2.Sign in Account\n";
+cout<<"         3.Diposite Amount\n";
+cout<<"         4.Withdraw Amount\n";
+cout<<"         5.Balance Enquiry\n";
+cout<<"         6.Account Info\n";
+cout<<"         7.Show All Accounts\n";
+cout<<"         8.close Account\n";
+cout<<"         9.Exit\n";
+cout<<"Enter your choice";
+cin>>choice;
+    switch(choice)
     {
+case 1:
+    cout<<"Enter your first name\n";
+        cin>>fname;
+    cout<<"Enter your last name\n";
+        cin>>lname;
+    cout<<"Enter your Balance \n";
+        cin>>balance;
+    acc=b.OpenAccount(fname,lname,balance);
+    cout<<"The Account created \n";
+    cout<<acc;
+    break;
+case 2:
 
+    break;
+case 3:
+    cout<<"Enter your Account number\n";
+    cin>>accnum;
+    cout<<"Enter your Balance \n";
+    cin>>balance;
+    acc=b.Diposite(accnum,balance);
+    cout<<acc;
+    break;
+case 4:
+
+    break;
+case 5:
+     cout<<"Enter your first name\n";
+        cin>>fname;
+    cout<<"Enter your last name\n";
+        cin>>lname;
+    cout<<"Enter your Balance \n";
+        cin>>balance;
+    acc=b.OpenAccount(fname,lname,balance);
+    cout<<"The Account created \n";
+    cout<<acc;
+    break;
+
+case 6:
+
+    break;
+case 7:
+
+    break;
+case 8:
+
+    break;
+case 9:
+
+    break;
     }
 
+}
+while(choice!=7);
+return  0;
+}
+Account::Account(string fname,string lname,float bal)
+{
+    NextAccountNumber++;
+    accountnumber=NextAccountNumber;
+    firstname=fname;
+    lastname=lname;
+    balance=bal;
 }
