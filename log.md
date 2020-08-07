@@ -10,7 +10,7 @@
 
 ### Day 1: August 07, 2020
 
-**Today's Progress:** Improved the code structure, thinked about some new features and a way to implement them and I wrote some functions definition.
+**Today's Progress:** Improved the code structure, considered adding some new features and a way to implement them and I wrote some functions definition.
 
 **Thoughts:** I feel like i'm going very slow but as long as i'm learning and making new steps its fine. 
 
