@@ -19,9 +19,23 @@
 =======
 ### Day 1: August 06, 2020
 
+<<<<<<< HEAD
 **Today's Progress:** I started a banking system project which is from the course that i've recently finished (& the only course), made a flow chart for the project, and made the code structure (classes & functions declaration ...) .
 
 **Thoughts:** I guess it will not be an easy one as its my first time making a project but i'll keep going. 
+=======
+### Day 2: August 7, 2020 
+
+**My Progress Today:** I still code in my project (Banking system) and added more features (functions) and I'll keep going to finish it.
+
+**Thoughts:** I think it will not be easy but I'm Feeling so excited .
+
+### Day 3: August 8, 2020 
+
+**My Progress Today:**
+
+**Thoughts:** 
+>>>>>>> 5a7fc2249efd0b5e143741b9b4ca7893d4b74bf6
 
 **Link to work:** [c++ course](https://www.udemy.com/course/cpp-deep-dive/) , [recent code progress](https://github.com/MaGnsio/100-days-of-code/commit/e83ed7798d9ba1f236457d534316495f05ed625f)
 
