@@ -2,29 +2,26 @@
 #include <iostream>
 #include <fstream>
 #include <map>
+#include <stdlib.h>
 #define Min_BALANCE 500
 using namespace std;
-
 class Account
 {
     //class properties
   private:
-    long accountnumber;
-    string firstname;
-    string lastname;
-    float balance;
-    static long NextAccountNumber;
+    long acc_no;
+    string acc_name;
+    float acc_balance;
+    static long next_acc_no;
     //class behaviors
   public:
-
     //constructors
-    Account(){}
-    Account(string fname ,string lname ,float balance);
+    Account();
+    Account(string acc_name,float acc_balance);
     //Actions
-    long getAccno(){return accountnumber;}
-    string getFirstName(){return firstname;}
-    string getLastName(){return lastname;}
-    float getBalance(){return balance;}
+    long get_acc_no();
+    string get_acc_name();
+    float get_acc_balance();
     float Debosit(float amount);
     float Withdraw(float amount);
     static void setLastAccountNumber(long accountnumber);
@@ -33,36 +30,42 @@ class Account
     friend ifstream & operator>>(ifstream &ifs,Account &acc);
     friend ostream & operator<<(ostream &os,Account &acc);
 };
-   long Account::NextAccountNumber=0;
-
 class Bank
 {
-    Bank(string firstname,string flastname,float balance);
     //class properties
   private:
-    map<long,Account> accounts;  //a map structure to store the bank accounts on list
+    map<long,Account> acc_list;  //a map structure to store the bank accounts on list
 
     //class behaviors
   public:
 
     //constructors
+    Bank ();
     //Actions
-    Account OpenAccount(string fname ,string lname ,float balance);
-    Account BalanceEnquiry(long accountNumber);
-    Account Diposite(long accountNumber ,float amount);
-    Account Withdraw(long accountNumber ,float amount);
-    void CloseAccount(long accountNumber);
-    void ShowAllAccounts();
+    Account open_acc(string fname ,string lname ,float balance);
+    account show_acc (long acc_no);
+    Account diposite(long acc_no ,float amount);
+    Account withdraw(long acc_no ,float amount);
+    float balance_Enquiry(long acc_no);
+    void close_acc(long acc_no);
+    void show_all_accs();
+    bool is_acc_exist (long acc_no, string acc_name);
+    //destructor
     ~Bank();
 };
+long Account::next_acc_no = 0;
 int main()
 {
-    Bank b;
+    Bank b();
     Account acc;
     int choice,accnum;
-    string fname,lname;
+    string name;
     float balance,amount;
-do
+try
+{
+    if (choice<1||choice>9)
+        throw exception();
+    do
 {
     //make a menu
 cout<<"Banking System\n\n";
@@ -130,32 +133,114 @@ case 9:
 
     break;
     }
+long Account::NextAccountNumber=0;
+
 
 }
 while(choice!=7);
+}
+catch(exception e)
+{
+    cout<<"Error! choose number between 1:9"
+}
 return  0;
 }
-Account::Account(string fname,string lname,float bal)
+
+//implementation of  Class account methods
+Account::Account ()
+{
+}
+Account::Account( string n,float bal)
 {
     NextAccountNumber++;
     accountnumber=NextAccountNumber;
-    firstname=fname;
-    lastname=lname;
+    name=n;
     balance=bal;
 }
-Account::Debosit(float amount)
+
+long Account:: get_acc_no ()
 {
-    return  balance+=amount;
+    return accountnumber;
 }
-Account::Withdraw(float amount)
+string Account::get_acc_name ()
 {
-    if(balance -amount<Min_BALANCE
+    return acc_name;
+}
+float Account::get_acc_balance ()
+	{
+		return acc_balance;
+	}
+float Account::Debosit (float amount)
+{
+    return  acc_balance+=amount;
+}
+float Account::Withdraw (float amount)
+{
+    if(acc_balance - amount < Min_BALANCE
        )
-    return balance-=amount;
+    return acc_balance-=amount;
 }
-Bank::OpenAccount(string fname,string lname,float balance)
+ofstream& operator<< (ofstream &ofs,account &acc)
+	{
+		ofs << "Account Number : " << acc.get_acc_no () << endl;
+		ofs << "Account Name : " << acc.get_acc_name () << endl;
+		ofs << "Account Balance : " << acc.get_acc_balance () <<endl;
+		return ofs;
+	}
+ifstream& operator>> (ifstream &ifs,account &acc)
+	{
+		ifs >> acc.acc_no;
+		getline (ifs, acc.acc_name) ;
+		ifs >> acc.acc_balance;
+		return ifs;
+	}
+ostream& operator<< (ostream &os,account &acc)
+	{
+		os << "Account Number : " << acc.get_acc_no () << endl;
+		os << "Account Name : " << acc.get_acc_name () <<endl;
+		os << "Account Balance : " << acc.get_acc_balance () << endl;
+		return os;
+	}
+//implementation of  Class Bank methods
+Bank::Bank ()
 {
-    this.balance=balance;
-    firstname=fname;
-    lastname=lname;
+    Account acc;
 }
+Account Bank::open_acc (string acc_name, long acc_balance)
+{
+    Account acc(acc_name, acc_balance);
+}
+Account Bank::show_acc (long acc_no)
+{
+    map<long, Account>::iterator itr = acc_list.find(acc_no);
+    return itr -> second;	
+}
+Account Bank::deposit (long acc_no, float amount)
+{
+    map<long, Account>::iterator itr = acc_list.find(acc_no);
+    itr -> second.deposit(amount);
+    return itr -> second;
+}
+Account Bank::withdraw (long acc_no, float amount)
+{
+    map<long, Account>::iterator itr = acc_list.find(acc_no);
+    itr -> second.withdraw(amount);
+    return itr -> second;
+}
+Account Bank::close_acc (long acc_no)
+{
+    map<long, Account>::iterator itr = acc_list.find(acc_no);
+    acc_list.erase(acc_no)
+}
+float Bank::total ()//to show the sum of all account balance
+{
+    float sum=0.0;
+    for(x=acc_list.begin();x!=acc_list.end();x++)
+    {
+        sum += itr -> second.get_acc_balance ();        
+    }
+    return sum;
+}
+//End of my program
+
+
