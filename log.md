@@ -18,8 +18,7 @@
 
 ### Day 3: August 08, 2020
 
-**Today's Progress:** implemented every member function of the project classes, finalized the program structure and practiced a bit on file handling using C++.
+**Today's Progress:** implemented some member function in my project (Banking system), so close to finish my program 
 
-**Thoughts:** feeling so much Improvement which makes me so excited. 
+**Thoughts:** I'm getting better, can't wait till getting the END.
 
-**Link to work:** [recent code progress](https://github.com/MaGnsio/100-days-of-code/commit/a67851c5730802c51d81d2d5c64a88a45fc34c35)
