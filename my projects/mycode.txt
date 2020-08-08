@@ -241,6 +241,5 @@ float Bank::total ()//to show the sum of all account balance
     }
     return sum;
 }
-//End of my program
 
 
