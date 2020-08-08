@@ -15,3 +15,11 @@
 **Thoughts:** I feel like i'm going very slow but as long as i'm learning and making new steps its fine. 
 
 **Link to work:**[recent code progress](https://github.com/MaGnsio/100-days-of-code/tree/master/banking%20system%20project)
+
+### Day 2: August 08, 2020
+
+**Today's Progress:** implemented every member function of the project classes, finalized the program structure and practiced a bit on file handling using C++.
+
+**Thoughts:** feeling so much Improvement which makes me so excited. 
+
+**Link to work:**[recent code progress](https://github.com/MaGnsio/100-days-of-code/tree/master/banking%20system%20project)
