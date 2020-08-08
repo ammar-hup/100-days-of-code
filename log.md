@@ -16,7 +16,17 @@
 
 **Thoughts:** I think it will not be easy but I started my journey, I am very excited and I will keep going.
 
+### Day 2: August 7, 2020 
 
+**My Progress Today:** I still code in my project (Banking system) and added more features (functions) and I'll keep going to finish it.
+
+**Thoughts:** I think it will not be easy but I'm Feeling so excited .
+
+### Day 3: August 8, 2020 
+
+**My Progress Today:**
+
+**Thoughts:** 
 
 
 
