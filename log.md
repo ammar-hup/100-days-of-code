@@ -4,8 +4,6 @@
 
  **Link to work:** [Calculator App](http://www.example.com)
 
- **Link(s) to work**: [Calculator App](http://www.example.com) -->
-
 # 100 Days Of Code - Log Ammar
 
 
@@ -25,14 +23,14 @@
 =======
 ### Day 3: August 8, 2020 
 
-**My Progress Today:**
+**My Progress Today:**  implemented some member function in my project (Banking system), so close to finish my program .
 
-**Thoughts:**
+**Thoughts:** I'm getting better, can't wait till getting the END .
 
 =======
 ### Day 4: August 9, 2020 
 
-**My Progress Today:**
+**My Progress Today:** Finally, I've finished my project (Banking System), I'll put the last touch on the main function and run the program.
 
-**Thoughts:**
+**Thoughts:** I'm feeling so happy case I finished my first project in (oop) at c++ and ready to continue .
 
