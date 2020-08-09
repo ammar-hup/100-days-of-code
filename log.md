@@ -12,8 +12,10 @@
 ### Day 1: August 6, 2020 
 
 **My Progress Today:** I started a project from a curse that I have finished <my first course>, I arranged my thoughts, and made some code structure <Heads of classes & some functions declaration > .
+  
+**Thoughts:** I think it will not be easy but I started my journey, I am very excited and I will keep going
 
-**Thoughts:** I think it will not be easy but I started my journey, I am very excited and I will keep going.
+
 =======
 ### Day 2: August 7, 2020 
 
@@ -25,5 +27,4 @@
 
 **My Progress Today:**
 
-**Thoughts:** 
-
+**Thoughts:**
