@@ -61,17 +61,7 @@ int main()
     long choice,accnum;
     string name;
     float balance,amount;
-try
-{
-    if (choice<1||choice>9)
-        throw exception();
-}
-catch(exception e)
-{
-    cout<<"Error! choose number between 1:9"
-}
-    do
-{
+
     //make a menu
 cout<<"Banking System\n\n";
 cout<<"         Select one Option below\n";
@@ -84,24 +74,42 @@ cout<<"         6.close Account\n";
 cout<<"         7.Exit\n";
 cout<<"Enter your choice";
 cin>>choice;
+try
+{
+    if (choice<1||choice>9)
+        throw exception();
+}
+catch(exception e)
+{
+    cout<<"Error! choose number between 1:9"
+}
+    do
+{
     switch(choice)
     {
 case 1:
     cout<<"Enter your Account name and, Enter your Balance \n";
-    b.open_acc(cin>>name,cin>>balance);
+    getline(cin,name);
+    cin>>balance;
+    b.open_acc(name,balance);
     cout<<"Congratulations, The Account is created \n";
     break;
 case 2:
-    cout<<"Enter your Account number \n" 
-    b.show_acc(cin>>accnum);
+    cout<<"Enter your Account number \n"
+    cin>>accnum;
+    b.show_acc(accnum);
     break;
 case 3:
     cout<<"Enter your Account number and, the Balance you want to add \n";
-    b.deposit(cin>>accnum,cin>>amount)
+    cin>>accnum;
+    cin>>amount;
+    b.deposit(accnum,amount)
     break;
 case 4:
     cout<<"Enter your Account number and, the Balance you want to get \n";
-    b.withdraw(cin>>accnum,cin>>amount)
+    cin>>accnum;
+    cin>>amount;
+    b.withdraw(accnum,amount)
     break;
 case 5:
     cout<<"All accounts in the bank \n"
@@ -109,15 +117,14 @@ case 5:
     break;
 case 6:
     cout<<"Enter your Account number to remove it \n"
-    b.close_acc(cin>>accnum)
+    cin>>accnum;
+    b.close_acc(accnum)
     break;
 case 7:
     cout<<"thank you for using my Bank,Goodbye \n"
     break;
     }
 long Account::next_acc_no=0;
-
-
 }
 while(choice!=7);
 }
