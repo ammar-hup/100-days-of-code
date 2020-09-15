@@ -34,3 +34,16 @@
 
 **Thoughts:** I'm feeling so happy case I finished my first project in (oop) at c++ and ready to continue .
 
+### from day 5 to day 25 
+
+**My Progress :** starting solving problems in codeforces and goin to a global contests.
+
+**Thoughts:** I'm feeling so excited while solving problems and i'll do my best .
+
+### from day 25 to day 42 
+
+**My Progress :** Continue solving problems in codeforces and get rank and take a break cause my exams.
+
+**Thoughts:** I'm feeling so excited ,i'll continue in the challenge tell the end and i'll do my best .
+
+
